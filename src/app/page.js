@@ -1,5 +1,6 @@
-import Image from "next/image";
+
 import Link from "next/link";
+import Avatar from "./components/Avatar";
 
 export default function Home() {
   return (
@@ -12,13 +13,14 @@ export default function Home() {
       {/* Header */}
       <header className="flex  justify-between w-screen p-4 text-sm text-gray-700 ">
         <div className="flex space-x-4 items-center">
-          <Link className="hover:text-black hover:underline" to="/" href={'/'}>About</Link>
-          <Link className="hover:text-black hover:underline" to="/"  href={'/'}>Store</Link>
+          <Link className="link" to="/" href={'/'}>About</Link>
+          <Link className="link" to="/"  href={'/'}>Store</Link>
         </div>
 
         <div className="flex space-x-4 items-center">
-        <Link className="hover:text-black hover:underline" to="/" href={'/'}>Gmail</Link>
-        <Link className="hover:text-black hover:underline" to="/"  href={'/'}>Images</Link>
+        <Link className="link" to="/" href={'/'}>Gmail</Link>
+        <Link className="link" to="/"  href={'/'}>Images</Link>
+        <Avatar url='https://i.pravatar.cc/150?img=12' />
         </div>
       </header>
       {/* Fin Header */}
