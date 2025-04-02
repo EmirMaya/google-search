@@ -2,6 +2,7 @@
 import Link from "next/link";
 import Avatar from "./components/Avatar";
 import {WindowIcon} from "@heroicons/react/24/solid"
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -25,7 +26,17 @@ export default function Home() {
         <Avatar url='https://i.pravatar.cc/150?img=12' />
         </div>
       </header>
+
+     
       {/* Fin Header */}
+
+      {/* Body */}
+      <form className="w-full flex justify-center mt-20">
+        <Image src='https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/1200px-Google_2015_logo.svg.png' height={40} width={300} alt="logo"/>
+
+      </form>
+      {/* Fin Body */}
     </>
+    
   );
 }
