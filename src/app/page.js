@@ -1,7 +1,7 @@
 
 import Link from "next/link";
 import Avatar from "./components/Avatar";
-import {WindowIcon} from "@heroicons/react/24/solid"
+import {MagnifyingGlassIcon, MicrophoneIcon, WindowIcon} from "@heroicons/react/24/solid"
 import Image from "next/image";
 
 export default function Home() {
@@ -33,7 +33,11 @@ export default function Home() {
       {/* Body */}
       <form className="w-full flex justify-center mt-20">
         <Image src='https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/1200px-Google_2015_logo.svg.png' height={40} width={300} alt="logo"/>
-
+        <div>
+          <MagnifyingGlassIcon className="h-5 mr-3 text-gray-300"/>
+          <input type="text" className="focus:outline-none"/>
+          <MicrophoneIcon className="h-5 text-gray-300" />
+        </div>
       </form>
       {/* Fin Body */}
     </>
