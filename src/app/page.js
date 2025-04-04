@@ -1,7 +1,7 @@
 
 import Link from "next/link";
 import Avatar from "./components/Avatar";
-import {MagnifyingGlassIcon, MicrophoneIcon, WindowIcon} from "@heroicons/react/24/solid"
+import {MagnifyingGlassIcon, MicrophoneIcon, Square2StackIcon, Squares2X2Icon, WindowIcon} from "@heroicons/react/24/solid"
 import Image from "next/image";
 
 export default function Home() {
@@ -22,7 +22,7 @@ export default function Home() {
         <div className="flex space-x-4 items-center">
         <Link className="link" to="/" href={'/'}>Gmail</Link>
         <Link className="link" to="/"  href={'/'}>Images</Link>
-        <WindowIcon className="h-10 w-10 p-2 rounded-full hover:bg-gray-100"/>
+        <Squares2X2Icon className="h-10 w-10 p-2 rounded-full hover:bg-gray-100"/>
         <Avatar url='https://i.pravatar.cc/150?img=12' />
         </div>
       </header>
@@ -31,13 +31,19 @@ export default function Home() {
       {/* Fin Header */}
 
       {/* Body */}
-      <form className="w-full flex justify-center mt-20">
+      <form className="w-full flex flex-col justify-center items-center mt-44 flex-grow">
         <Image src='https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/1200px-Google_2015_logo.svg.png' height={40} width={300} alt="logo"/>
-        <div>
-          <MagnifyingGlassIcon className="h-5 mr-3 text-gray-300"/>
-          <input type="text" className="focus:outline-none"/>
-          <MicrophoneIcon className="h-5 text-gray-300" />
+        <div className="flex w-full hover:shadow-lg focus-within:shadow-lg max-w-md rounded-full border border-gray-200 px-5 py-3 items-center sm:max-w-xl lg:max-w-2xl">
+          <MagnifyingGlassIcon className="h-5 mr-3 text-gray-500"/>
+          <input type="text" className="focus:outline-none flex-grow"/>
+          <MicrophoneIcon className="h-5 text-gray-500" />
         </div>
+
+        <div className="p-4">
+          <button className="btn">Google search</button>
+          <button className="btn">I&apos;m feeling lucky</button>
+        </div>
+
       </form>
       {/* Fin Body */}
     </>
