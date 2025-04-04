@@ -39,7 +39,7 @@ export default function Home() {
           <MicrophoneIcon className="h-5 text-gray-500" />
         </div>
 
-        <div className="p-4">
+        <div className="flex flex-col w-1/2 space-y-2 justify-center mt-8 sm:space-y-0 sm:flex-row sm:space-x-4">
           <button className="btn">Google search</button>
           <button className="btn">I&apos;m feeling lucky</button>
         </div>
