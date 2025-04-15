@@ -13,7 +13,7 @@ export default function Home() {
   
   const search = e => {
     e.preventDefault();
-    const term = searchInputRef.value; // search input value
+    const term = searchInputRef.current.value; // search input value
 
     if(!term) return; // ignore empty string
 
