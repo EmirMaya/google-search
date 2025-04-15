@@ -1,11 +1,25 @@
-
+'use client';
 import Link from "next/link";
 import Avatar from "./components/Avatar";
 import {MagnifyingGlassIcon, MicrophoneIcon, Square2StackIcon, Squares2X2Icon, WindowIcon} from "@heroicons/react/24/solid"
 import Image from "next/image";
 import Footer from "./components/Footer";
+import { useRef } from "react";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
+  const router = useRouter();
+  const searchInputRef = useRef(null);
+  
+  const search = e => {
+    e.preventDefault();
+    const term = searchInputRef.value; // search input value
+
+    if(!term) return; // ignore empty string
+
+    router.push(`/search?q=${term}`); // redirect to search page with query parameter
+  }
+
   return (
     <div className="flex flex-col justify-center items-center">
       <head>
@@ -36,13 +50,13 @@ export default function Home() {
         <Image src='https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/1200px-Google_2015_logo.svg.png' height={40} width={300} alt="logo"/>
         <div className="flex w-full hover:shadow-lg focus-within:shadow-lg max-w-md rounded-full border border-gray-200 px-5 py-3 items-center sm:max-w-xl lg:max-w-2xl">
           <MagnifyingGlassIcon className="h-5 mr-3 text-gray-500"/>
-          <input type="text" className="focus:outline-none flex-grow"/>
+          <input ref={searchInputRef} type="text" className="focus:outline-none flex-grow"/>
           <MicrophoneIcon className="h-5 text-gray-500" />
         </div>
 
         <div className="flex flex-col w-1/2 space-y-2 justify-center mt-8 sm:space-y-0 sm:flex-row sm:space-x-4">
-          <button className="btn">Google search</button>
-          <button className="btn">I&apos;m feeling lucky</button>
+          <button onClick={search} className="btn">Google search</button>
+          <button onClick={search} className="btn">I&apos;m feeling lucky</button>
         </div>
 
       </form>
