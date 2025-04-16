@@ -1,16 +1,14 @@
 import React from 'react';
-import {
-    MapIcon,
-    NewspaperIcon,
-    PhotoIcon,
-    PlayIcon,
-    MagnifyingGlassIcon,
-    EllipsisVerticalIcon
-} from "@heroicons/react/24/outline";
 
-const HeaderOption = () => {
+
+const HeaderOption = ({Icon, title, selected}) => {
   return (
-    <div>HeaderOption</div>
+    <div className={`p-3 flex items-center space-x-1 border-b-4
+    border-transparent hover:text-blue-500 cursor-pointer hover:border-b-blue-500
+    ${selected && 'text-blue-500 border-b-blue-500'}`}>
+      <Icon className='h-4'/>
+      <p className='hidden sm:inline-flex'>{title}</p>
+    </div>
   )
 }
 
