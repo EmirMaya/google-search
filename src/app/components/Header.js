@@ -7,6 +7,8 @@ import {
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import React, { useRef } from "react";
+import Avatar from "./Avatar";
+import HeaderOptions from "./HeaderOptions";
 
 const Header = () => {
   const searchInputRef = useRef(null);
@@ -22,7 +24,7 @@ const Header = () => {
   };
 
   return (
-    <header className="sticky top-0 bg-white">
+    <header className="sticky top-0 bg-white w-full">
       <div className="flex w-full p-6 items-center ">
         <Image
           src="https://www.google.co.uk/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png"
@@ -48,7 +50,10 @@ const Header = () => {
             Search
           </button>
         </form>
+        <Avatar className='ml-auto' url='https://i.pravatar.cc/150?img=12' />
       </div>
+      {/*Header Options */}
+      <HeaderOptions />
     </header>
   );
 };
