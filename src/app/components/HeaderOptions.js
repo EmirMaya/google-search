@@ -1,10 +1,14 @@
-import Link from 'next/link'
-import React from 'react'
+import Link from 'next/link';
+import React from 'react';
+import HeaderOption from './HeaderOption';
 
 const HeaderOptions = () => {
   return (
-    <div className='text-gray-500'>
+    <div className=''>
          {/* Left */}
+         <div className='flex space-x-6'>
+            <HeaderOption />
+         </div>
 
         {/* Right */}
         <div className='flex space-x-3'>
@@ -17,6 +21,6 @@ const HeaderOptions = () => {
         </div>
     </div>
   )
-}
+};
 
-export default HeaderOptions
+export default HeaderOptions;

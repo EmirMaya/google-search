@@ -3,7 +3,7 @@ export const metadata = {
   title: 'Search Results',
   description: 'Buscador de Google',
 };
-import React from 'react'
+import React from 'react';
 import Header from '../components/Header';
 
 
@@ -17,6 +17,6 @@ const Search = () => {
         
     </div>
   )
-}
+};
 
 export default Search;
