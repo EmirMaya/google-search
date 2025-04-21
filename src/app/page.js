@@ -36,7 +36,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </head>
       {/* Header */}
-      <header className="flex  justify-between w-screen p-4 text-sm text-gray-700 ">
+      <header className="flex  justify-between w-screen p-4 text-sm text-gray-200 ">
         <div className="flex space-x-4 items-center">
           <Link className="link" to="/" href={"/"}>
             About
@@ -53,7 +53,7 @@ export default function Home() {
           <Link className="link" to="/" href={"/"}>
             Images
           </Link>
-          <Squares2X2Icon className="h-10 w-10 p-2 rounded-full hover:bg-gray-100" />
+          <Squares2X2Icon className="h-10 w-10 p-2 rounded-full hover:bg-gray-500" />
           <Avatar url="https://i.pravatar.cc/150?img=12" />
         </div>
       </header>
@@ -70,13 +70,13 @@ export default function Home() {
                 className={`w-full h-[12px] sm:h-[17px] lg:h-[23px] ${bg}`}
                 initial={{ x: -2000, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
-                transition={{ delay: index * 0.2, duration: 0.5 }}
+                transition={{ delay: index * 0.5, duration: 0.9 }}
               />
             )
           )}
         </div>
 
-        <div className="bg-image z-10 px-5 lg:px-10 rounded-2xl lg:rounded-3xl">
+        <div className="bg-image z-10 px-5 lg:px-10 rounded-2xl lg:rounded-[22px]">
           <motion.h2
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}

@@ -5,7 +5,8 @@
 }
 
 .txt-sh {
-  text-shadow: 0 0 10px rgba(255, 251, 251, 0.972);
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.957);
+
 }
 
 body,footer, .bg-image{
@@ -17,7 +18,7 @@ body,footer, .bg-image{
 
 @layer {
   .link {
-    @apply hover:underline cursor-pointer hover:text-black;
+    @apply hover:underline cursor-pointer hover:text-white;
   }
 
   .btn {
