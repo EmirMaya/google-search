@@ -14,6 +14,7 @@ import { useRef } from "react";
 import { useRouter } from "next/navigation";
 import { monoton } from "./layout";
 
+
 export default function Home() {
   const router = useRouter();
   const searchInputRef = useRef(null);
@@ -61,11 +62,11 @@ export default function Home() {
 
       {/* Body */}
       <form className="w-4/5 relative flex flex-col justify-center items-center mt-44 flex-grow">
-        <div className="w-screen absolute top-0 flex flex-col items-center justify-cente">
-          <div className="w-full h-[23px] bg-red-500"></div>
-          <div className="w-full h-[23px] bg-orange-400"></div>
-          <div className="w-full h-[23px] bg-amber-400"></div>
-          <div className="w-full h-[23px] bg-yellow-300"></div>
+        <div className="w-screen absolute top-0 flex flex-col items-center justify-center">
+            <div className="w-full h-[23px] !bg-red-500"></div>
+            <div className="w-full h-[23px] !bg-orange-400"></div>
+            <div className="w-full h-[23px] !bg-amber-400"></div>
+            <div className="w-full h-[23px] !bg-yellow-300"></div>
         </div>
 
         <h2
@@ -85,7 +86,7 @@ export default function Home() {
           <MicrophoneIcon className="h-5 text-gray-500" />
         </div>
 
-        <div className="flex flex-col w-1/2 space-y-2 justify-center mt-8 sm:space-y-0 sm:flex-row sm:space-x-4">
+        <div className="flex flex-col w-1/2 space-y-2 justify-center mt-8 sm:space-y-0 sm:flex-row sm:space-x-4 mb-48">
           <button onClick={search} className="btn">
             Google search
           </button>
