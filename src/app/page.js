@@ -1,24 +1,31 @@
-'use client';
+"use client";
 import Link from "next/link";
 import Avatar from "./components/Avatar";
-import {MagnifyingGlassIcon, MicrophoneIcon, Square2StackIcon, Squares2X2Icon, WindowIcon} from "@heroicons/react/24/solid"
+import {
+  MagnifyingGlassIcon,
+  MicrophoneIcon,
+  Square2StackIcon,
+  Squares2X2Icon,
+  WindowIcon,
+} from "@heroicons/react/24/solid";
 import Image from "next/image";
 import Footer from "./components/Footer";
 import { useRef } from "react";
 import { useRouter } from "next/navigation";
+import { monoton } from "./layout";
 
 export default function Home() {
   const router = useRouter();
   const searchInputRef = useRef(null);
-  
-  const search = e => {
+
+  const search = (e) => {
     e.preventDefault();
     const term = searchInputRef.current.value; // search input value
 
-    if(!term) return; // ignore empty string
+    if (!term) return; // ignore empty string
 
     router.push(`/search?q=${term}`); // redirect to search page with query parameter
-  }
+  };
 
   return (
     <div className="flex flex-col justify-center items-center">
@@ -30,35 +37,62 @@ export default function Home() {
       {/* Header */}
       <header className="flex  justify-between w-screen p-4 text-sm text-gray-700 ">
         <div className="flex space-x-4 items-center">
-          <Link className="link" to="/" href={'/'}>About</Link>
-          <Link className="link" to="/"  href={'/'}>Store</Link>
+          <Link className="link" to="/" href={"/"}>
+            About
+          </Link>
+          <Link className="link" to="/" href={"/"}>
+            Store
+          </Link>
         </div>
 
         <div className="flex space-x-4 items-center">
-        <Link className="link" to="/" href={'/'}>Gmail</Link>
-        <Link className="link" to="/"  href={'/'}>Images</Link>
-        <Squares2X2Icon className="h-10 w-10 p-2 rounded-full hover:bg-gray-100"/>
-        <Avatar url='https://i.pravatar.cc/150?img=12' />
+          <Link className="link" to="/" href={"/"}>
+            Gmail
+          </Link>
+          <Link className="link" to="/" href={"/"}>
+            Images
+          </Link>
+          <Squares2X2Icon className="h-10 w-10 p-2 rounded-full hover:bg-gray-100" />
+          <Avatar url="https://i.pravatar.cc/150?img=12" />
         </div>
       </header>
 
-     
       {/* Fin Header */}
 
       {/* Body */}
-      <form className="w-4/5 flex flex-col justify-center items-center mt-44 flex-grow">
-        <Image src='https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/1200px-Google_2015_logo.svg.png' height={40} width={300} alt="logo"/>
-        <div className="flex w-full hover:shadow-lg focus-within:shadow-lg max-w-md rounded-full border border-gray-200 px-5 py-3 items-center sm:max-w-xl lg:max-w-2xl">
-          <MagnifyingGlassIcon className="h-5 mr-3 text-gray-500"/>
-          <input ref={searchInputRef} type="text" className="focus:outline-none flex-grow"/>
+      <form className="w-4/5 relative flex flex-col justify-center items-center mt-44 flex-grow">
+        <div className="w-screen absolute top-0 flex flex-col items-center justify-cente">
+          <div className="w-full h-[23px] bg-red-500"></div>
+          <div className="w-full h-[23px] bg-orange-400"></div>
+          <div className="w-full h-[23px] bg-amber-400"></div>
+          <div className="w-full h-[23px] bg-yellow-300"></div>
+        </div>
+
+        <h2
+          className={`${monoton.variable} font-monoton text-5xl sm:text-7xl lg:text-8xl text-white relative z-10 px-10 rounded-3xl`}
+        >
+          GOOGLE
+        </h2>
+
+        {/* <Image src='https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/1200px-Google_2015_logo.svg.png' height={40} width={300} alt="logo"/> */}
+        <div className="flex w-full mt-3 hover:shadow-lg focus-within:shadow-lg max-w-md rounded-full border border-gray-200 px-5 py-3 items-center sm:max-w-xl lg:max-w-2xl">
+          <MagnifyingGlassIcon className="h-5 mr-3 text-gray-500" />
+          <input
+            ref={searchInputRef}
+            type="text"
+            className="focus:outline-none flex-grow"
+          />
           <MicrophoneIcon className="h-5 text-gray-500" />
         </div>
 
         <div className="flex flex-col w-1/2 space-y-2 justify-center mt-8 sm:space-y-0 sm:flex-row sm:space-x-4">
-          <button onClick={search} className="btn">Google search</button>
-          <button onClick={search} className="btn">I&apos;m feeling lucky</button>
+          <button onClick={search} className="btn">
+            Google search
+          </button>
+          <button onClick={search} className="btn">
+            I&apos;m feeling lucky
+          </button>
         </div>
-
       </form>
       {/* Fin Body */}
 
@@ -66,6 +100,5 @@ export default function Home() {
       <Footer />
       {/* Fin Footer */}
     </div>
-    
   );
 }

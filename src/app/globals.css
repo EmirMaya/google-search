@@ -1,7 +1,18 @@
 @import "tailwindcss";
 
+@theme inline {
+  --font-monoton: var(--font-monoton);
+}
+
+body,footer, h2{
+  background-image: url("/images/retro-bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 @layer {
-  .link { 
+  .link {
     @apply hover:underline cursor-pointer hover:text-black;
   }
 
