@@ -13,7 +13,7 @@ import Footer from "./components/Footer";
 import { useRef } from "react";
 import { useRouter } from "next/navigation";
 import { monoton } from "./layout";
-
+import { motion } from "framer-motion";
 
 export default function Home() {
   const router = useRouter();
@@ -63,17 +63,29 @@ export default function Home() {
       {/* Body */}
       <form className="w-4/5 relative flex flex-col justify-center items-center mt-44 flex-grow">
         <div className="w-screen absolute top-0 flex flex-col items-center justify-center">
-            <div className="w-full h-[23px] !bg-red-500"></div>
-            <div className="w-full h-[23px] !bg-orange-400"></div>
-            <div className="w-full h-[23px] !bg-amber-400"></div>
-            <div className="w-full h-[23px] !bg-yellow-300"></div>
+          {["bg-red-500", "bg-orange-400", "bg-amber-400", "bg-yellow-300"].map(
+            (bg, index) => (
+              <motion.div
+                key={index}
+                className={`w-full h-[12px] sm:h-[17px] lg:h-[23px] ${bg}`}
+                initial={{ x: -2000, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                transition={{ delay: index * 0.2, duration: 0.5 }}
+              />
+            )
+          )}
         </div>
 
-        <h2
-          className={`${monoton.variable} font-monoton text-5xl sm:text-7xl lg:text-8xl text-white relative z-10 px-10 rounded-3xl`}
-        >
-          GOOGLE
-        </h2>
+        <div className="bg-image z-10 px-5 lg:px-10 rounded-2xl lg:rounded-3xl">
+          <motion.h2
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 3.5, duration: 3.5 }}
+            className={`${monoton.variable} font-monoton text-5xl sm:text-7xl lg:text-8xl text-white relative z-10   txt-sh`}
+          >
+            GOOGLE
+          </motion.h2>
+        </div>
 
         {/* <Image src='https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/1200px-Google_2015_logo.svg.png' height={40} width={300} alt="logo"/> */}
         <div className="flex w-full mt-3 hover:shadow-lg focus-within:shadow-lg max-w-md rounded-full border border-gray-200 px-5 py-3 items-center sm:max-w-xl lg:max-w-2xl">

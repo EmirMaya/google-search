@@ -4,7 +4,11 @@
   --font-monoton: var(--font-monoton);
 }
 
-body,footer, h2{
+.txt-sh {
+  text-shadow: 0 0 10px rgba(255, 251, 251, 0.972);
+}
+
+body,footer, .bg-image{
   background-image: url("/images/retro-bg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
