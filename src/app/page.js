@@ -62,12 +62,13 @@ export default function Home() {
 
       {/* Body */}
       <form className="w-4/5 relative flex flex-col justify-center items-center mt-44 flex-grow">
-        <div className="w-screen absolute top-0 flex flex-col items-center justify-center">
-          {["bg-red-500", "bg-orange-400", "bg-amber-400", "bg-yellow-300"].map(
+        <div className="w-screen absolute top-[24] flex flex-col items-center justify-center">
+          {["bg-gradient-to-r from-red-500 from-20% via-transparent to-red-500 to-80%", "bg-gradient-to-r from-orange-400 from-20% via-transparent to-orange-400 to-80%", 
+          "bg-gradient-to-r from-amber-400 from-20%  via-transparent to-amber-400 to-80%", "bg-gradient-to-r from-yellow-300 from-20%  via-transparent to-yellow-300 to-80%"].map(
             (bg, index) => (
               <motion.div
                 key={index}
-                className={`w-full h-[12px] sm:h-[17px] lg:h-[23px] ${bg}`}
+                className={`w-full h-[12px] sm:h-[17px] lg:h-[7px] my-0.5 ${bg}`}
                 initial={{ x: -2000, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
                 transition={{ delay: index * 0.5, duration: 0.9 }}
@@ -76,7 +77,7 @@ export default function Home() {
           )}
         </div>
 
-        <div className="bg-image z-10 px-5 lg:px-10 rounded-2xl lg:rounded-[22px]">
+        <div className="z-10 px-5 lg:px-0 rounded-2xl ">
           <motion.h2
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -107,6 +108,7 @@ export default function Home() {
           </button>
         </div>
       </form>
+
       {/* Fin Body */}
 
       {/* Footer */}
