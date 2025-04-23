@@ -4,11 +4,9 @@ import Avatar from "./components/Avatar";
 import {
   MagnifyingGlassIcon,
   MicrophoneIcon,
-  Square2StackIcon,
   Squares2X2Icon,
-  WindowIcon,
 } from "@heroicons/react/24/solid";
-import Image from "next/image";
+
 import Footer from "./components/Footer";
 import { useRef } from "react";
 import { useRouter } from "next/navigation";
@@ -68,7 +66,7 @@ export default function Home() {
             (bg, index) => (
               <motion.div
                 key={index}
-                className={`w-full h-[3px]  sm:h-[5px]  lg:h-[7px] my-0.5 ${bg}`}
+                className={`w-full h-[3px]  sm:h-[5px]  lg:h-[7px] my-0.5 ${bg} drop-shadow-[0_0_6px_rgba(255,255,255,0.4)] blur-[0.7px]`}
                 initial={{ x: -2000, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
                 transition={{ delay: index * 0.3, duration: 0.5 }}
