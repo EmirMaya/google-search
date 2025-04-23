@@ -62,16 +62,16 @@ export default function Home() {
 
       {/* Body */}
       <form className="w-4/5 relative flex flex-col justify-center items-center mt-44 flex-grow">
-        <div className="w-screen absolute top-[24] flex flex-col items-center justify-center">
+        <div className="w-screen absolute top-[9px] sm:top-[17px] lg:top-[24] flex flex-col items-center justify-center">
           {["bg-gradient-to-r from-red-500 from-20% via-transparent to-red-500 to-80%", "bg-gradient-to-r from-orange-400 from-20% via-transparent to-orange-400 to-80%", 
           "bg-gradient-to-r from-amber-400 from-20%  via-transparent to-amber-400 to-80%", "bg-gradient-to-r from-yellow-300 from-20%  via-transparent to-yellow-300 to-80%"].map(
             (bg, index) => (
               <motion.div
                 key={index}
-                className={`w-full h-[12px] sm:h-[17px] lg:h-[7px] my-0.5 ${bg}`}
+                className={`w-full h-[3px]  sm:h-[5px]  lg:h-[7px] my-0.5 ${bg}`}
                 initial={{ x: -2000, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
-                transition={{ delay: index * 0.5, duration: 0.5 }}
+                transition={{ delay: index * 0.3, duration: 0.5 }}
               />
             )
           )}
@@ -81,7 +81,7 @@ export default function Home() {
           <motion.h2
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 1.7, duration: 3.5 }}
+            transition={{ delay: 1.5, duration: 3.5 }}
             className={`${monoton.variable} font-monoton text-5xl sm:text-7xl lg:text-8xl text-white relative z-10   txt-sh`}
           >
             GOOGLE
