@@ -71,7 +71,7 @@ export default function Home() {
                 className={`w-full h-[12px] sm:h-[17px] lg:h-[7px] my-0.5 ${bg}`}
                 initial={{ x: -2000, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
-                transition={{ delay: index * 0.5, duration: 0.9 }}
+                transition={{ delay: index * 0.5, duration: 0.5 }}
               />
             )
           )}
@@ -81,7 +81,7 @@ export default function Home() {
           <motion.h2
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 3.5, duration: 3.5 }}
+            transition={{ delay: 1.7, duration: 3.5 }}
             className={`${monoton.variable} font-monoton text-5xl sm:text-7xl lg:text-8xl text-white relative z-10   txt-sh`}
           >
             GOOGLE
@@ -89,14 +89,14 @@ export default function Home() {
         </div>
 
         {/* <Image src='https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/1200px-Google_2015_logo.svg.png' height={40} width={300} alt="logo"/> */}
-        <div className="flex w-full mt-3 hover:shadow-lg focus-within:shadow-lg max-w-md rounded-full border border-gray-200 px-5 py-3 items-center sm:max-w-xl lg:max-w-2xl">
-          <MagnifyingGlassIcon className="h-5 mr-3 text-gray-500" />
+        <div className="flex w-full mt-3 hover:shadow-lg focus-within:shadow-lg max-w-md rounded-full border-2 border-gray-200 px-5 py-3 items-center sm:max-w-xl lg:max-w-2xl">
+          <MagnifyingGlassIcon className="h-5 mr-3 text-gray-300" />
           <input
             ref={searchInputRef}
             type="text"
-            className="focus:outline-none flex-grow"
+            className="focus:outline-none flex-grow text-white"
           />
-          <MicrophoneIcon className="h-5 text-gray-500" />
+          <MicrophoneIcon className="h-5 text-gray-300" />
         </div>
 
         <div className="flex flex-col w-1/2 space-y-2 justify-center mt-8 sm:space-y-0 sm:flex-row sm:space-x-4 mb-48">
