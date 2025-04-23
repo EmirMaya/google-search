@@ -99,7 +99,7 @@ export default function Home() {
           <MicrophoneIcon className="h-5 text-gray-300" />
         </div>
 
-        <div className="flex flex-col w-1/2 space-y-2 justify-center mt-8 sm:space-y-0 sm:flex-row sm:space-x-4 mb-48">
+        <div className="flex flex-col w-1/3 sm:w-1/2 space-y-2 justify-center mt-8 sm:space-y-0 sm:flex-row sm:space-x-4 mb-48">
           <button onClick={search} className="btn">
             Google search
           </button>
