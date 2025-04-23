@@ -89,7 +89,7 @@ export default function Home() {
         </div>
 
         {/* <Image src='https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/1200px-Google_2015_logo.svg.png' height={40} width={300} alt="logo"/> */}
-        <div className="flex w-full mt-3 hover:shadow-lg focus-within:shadow-lg max-w-md rounded-full border-2 border-gray-200 px-5 py-3 items-center sm:max-w-xl lg:max-w-2xl">
+        <div className="flex w-full text-sm sm:text-base mt-3 hover:shadow-lg focus-within:shadow-lg max-w-md rounded-full border-2 border-gray-200 px-3 py-2 sm:px-5 sm:py-3 items-center sm:max-w-xl lg:max-w-2xl">
           <MagnifyingGlassIcon className="h-5 mr-3 text-gray-300" />
           <input
             ref={searchInputRef}
