@@ -34,7 +34,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </head>
       {/* Header */}
-      <header className="flex  justify-between w-screen p-4 text-sm text-gray-200 ">
+      <header className="w-full flex  justify-between p-4  text-sm text-gray-200 ">
         <div className="flex space-x-4 items-center">
           <Link className="link" to="/" href={"/"}>
             About
@@ -60,13 +60,13 @@ export default function Home() {
 
       {/* Body */}
       <form className="w-4/5 relative flex flex-col justify-center items-center mt-44 flex-grow">
-        <div className="w-screen absolute top-[9px] sm:top-[17px] lg:top-[24] flex flex-col items-center justify-center">
+        <div className="absolute top-[9px] sm:top-[17px] lg:top-[24] flex flex-col items-center justify-center">
           {["bg-gradient-to-r from-red-500 from-20% via-transparent to-red-500 to-80%", "bg-gradient-to-r from-orange-400 from-20% via-transparent to-orange-400 to-80%", 
           "bg-gradient-to-r from-amber-400 from-20%  via-transparent to-amber-400 to-80%", "bg-gradient-to-r from-yellow-300 from-20%  via-transparent to-yellow-300 to-80%"].map(
             (bg, index) => (
               <motion.div
                 key={index}
-                className={`w-full h-[3px]  sm:h-[5px]  lg:h-[7px] my-0.5 ${bg} drop-shadow-[0_0_6px_rgba(255,255,255,0.4)] blur-[0.7px]`}
+                className={`w-screen h-[3px]  sm:h-[5px]  lg:h-[7px] my-0.5 ${bg} drop-shadow-[0_0_6px_rgba(255,255,255,0.4)]`}
                 initial={{ x: -2000, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
                 transition={{ delay: index * 0.3, duration: 0.5 }}
