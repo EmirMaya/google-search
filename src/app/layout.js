@@ -20,6 +20,9 @@ const geistMono = Geist_Mono({
 const metadata = {
   title: "Google Retro",
   description: "Retro version of Google Search",
+  icons: {
+    icon: "/favicon.ico", // asegurate que este archivo esté en /public
+  },
 };
 
 export default function RootLayout({ children }) {

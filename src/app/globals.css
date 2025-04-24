@@ -8,6 +8,9 @@
   text-shadow: 0 0 20px rgba(255, 255, 255, 0.957);
 
 }
+html, body {
+  overflow-x: hidden;
+}
 
 body,footer, .bg-image{
   background-image: url("/images/retro-bg.jpg");

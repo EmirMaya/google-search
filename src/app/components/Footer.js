@@ -7,8 +7,8 @@ const Footer = () => {
       <div className="px-8 py-3">
         <h3>Acerca de Google</h3>
       </div>
-      <div className="grid grid-cols-1">
-        <div>
+      <div className="grid grid-cols-1 px-8 py-2">
+        <div className="flex">
             <GlobeAmericasIcon className="h-5"/>
           <p>Carbon neutral since 2007</p>
         </div>

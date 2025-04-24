@@ -13,6 +13,7 @@ import { useRouter } from "next/navigation";
 import { monoton } from "./layout";
 import { motion } from "framer-motion";
 
+
 export default function Home() {
   const router = useRouter();
   const searchInputRef = useRef(null);
@@ -28,11 +29,7 @@ export default function Home() {
 
   return (
     <div className="flex flex-col justify-center items-center">
-      <head>
-        <title>Google</title>
-        <meta name="description" content="Buscador de Google" />
-        <link rel="icon" href="/favicon.ico" />
-      </head>
+  
       {/* Header */}
       <header className="w-full flex  justify-between p-4  text-sm text-gray-200 ">
         <div className="flex space-x-4 items-center">
@@ -67,9 +64,10 @@ export default function Home() {
               <motion.div
                 key={index}
                 className={`w-screen h-[3px]  sm:h-[5px]  lg:h-[7px] my-0.5 ${bg} drop-shadow-[0_0_6px_rgba(255,255,255,0.4)]`}
-                initial={{ x: -2000, opacity: 0 }}
-                animate={{ x: 0, opacity: 1 }}
-                transition={{ delay: index * 0.3, duration: 0.5 }}
+                initial={{scaleX: 0}}
+                animate={{ scaleX: 1 }}
+                transition={{ duration: 2 }}
+                style={{originX: 0.5}}
               />
             )
           )}
