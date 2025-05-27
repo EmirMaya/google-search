@@ -26,6 +26,15 @@ export default function Home() {
     // router.push(`/search?q=${term}`); // redirect to search page with query parameter
   };
 
+  const lucky = (e) => {
+    e.preventDefault();
+    const term = searchInputRef.current.value;
+
+    if(!term) return;
+
+    window.location.href = `https://www.google.com/search?q=${term}&btnI=I`;
+  }
+
   return (
     <div className="flex flex-col justify-center items-center">
       {/* Header */}
@@ -99,7 +108,7 @@ export default function Home() {
           <button onClick={search} className="btn">
             Google search
           </button>
-          <button onClick={search} className="btn">
+          <button onClick={lucky} className="btn">
             I&apos;m feeling lucky
           </button>
         </div>
