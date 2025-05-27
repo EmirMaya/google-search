@@ -13,7 +13,6 @@ import { useRouter } from "next/navigation";
 import { monoton } from "./layout";
 import { motion } from "framer-motion";
 
-
 export default function Home() {
   const router = useRouter();
   const searchInputRef = useRef(null);
@@ -23,13 +22,12 @@ export default function Home() {
     const term = searchInputRef.current.value; // search input value
 
     if (!term) return; // ignore empty string
-
-    router.push(`/search?q=${term}`); // redirect to search page with query parameter
+    window.location.href = `https://www.google.com/search?q=${term}`;
+    // router.push(`/search?q=${term}`); // redirect to search page with query parameter
   };
 
   return (
     <div className="flex flex-col justify-center items-center">
-  
       {/* Header */}
       <header className="w-full flex  justify-between p-4  text-sm text-gray-200 ">
         <div className="flex space-x-4 items-center">
@@ -58,19 +56,21 @@ export default function Home() {
       {/* Body */}
       <form className="w-4/5 relative flex flex-col justify-center items-center mt-44 flex-grow">
         <div className="absolute top-[9px] sm:top-[17px] lg:top-[24] flex flex-col items-center justify-center">
-          {["bg-gradient-to-r from-red-500 from-20% via-transparent to-red-500 to-80%", "bg-gradient-to-r from-orange-400 from-20% via-transparent to-orange-400 to-80%", 
-          "bg-gradient-to-r from-amber-400 from-20%  via-transparent to-amber-400 to-80%", "bg-gradient-to-r from-yellow-300 from-20%  via-transparent to-yellow-300 to-80%"].map(
-            (bg, index) => (
-              <motion.div
-                key={index}
-                className={`w-screen h-[3px]  sm:h-[5px]  lg:h-[7px] my-0.5 ${bg} drop-shadow-[0_0_6px_rgba(255,255,255,0.4)]`}
-                initial={{scaleX: 0}}
-                animate={{ scaleX: 1 }}
-                transition={{ duration: 2 }}
-                style={{originX: 0.5}}
-              />
-            )
-          )}
+          {[
+            "bg-gradient-to-r from-red-500 from-20% via-transparent to-red-500 to-80%",
+            "bg-gradient-to-r from-orange-400 from-20% via-transparent to-orange-400 to-80%",
+            "bg-gradient-to-r from-amber-400 from-20%  via-transparent to-amber-400 to-80%",
+            "bg-gradient-to-r from-yellow-300 from-20%  via-transparent to-yellow-300 to-80%",
+          ].map((bg, index) => (
+            <motion.div
+              key={index}
+              className={`w-screen h-[3px]  sm:h-[5px]  lg:h-[7px] my-0.5 ${bg} drop-shadow-[0_0_6px_rgba(255,255,255,0.4)]`}
+              initial={{ scaleX: 0 }}
+              animate={{ scaleX: 1 }}
+              transition={{ duration: 2 }}
+              style={{ originX: 0.5 }}
+            />
+          ))}
         </div>
 
         <div className="z-10 px-5 lg:px-0 rounded-2xl ">
