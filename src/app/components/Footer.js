@@ -9,18 +9,60 @@ const Footer = () => {
       </div>
       <div className="grid grid-cols-1 px-8 py-2">
         <div className="flex">
-            <GlobeAmericasIcon className="h-5"/>
+          <GlobeAmericasIcon className="h-5" />
           <p>Carbon neutral since 2007</p>
         </div>
         <div className="flex justify-center space-x-8 whitespace-nowrap">
-            <p>Advertising</p>
-            <p>Business</p>
-            <p>How Search Works</p>
+          <a
+            href="https://ads.google.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:underline"
+          >
+            Advertising
+          </a>
+          <a
+            href="https://www.google.com/services/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:underline"
+          >
+            Business
+          </a>
+          <a
+            href="https://www.google.com/search/howsearchworks/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:underline"
+          >
+            How Search Works
+          </a>
         </div>
         <div className="flex justify-center space-x-8 whitespace-nowrap">
-            <p>Privacy</p>
-            <p>Terms</p>
-            <p>Settings</p>
+          <a
+            href="https://policies.google.com/privacy"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:underline"
+          >
+            Privacy
+          </a>
+          <a
+            href="https://policies.google.com/terms"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:underline"
+          >
+            Terms
+          </a>
+          <a
+            href="https://www.google.com/preferences"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:underline"
+          >
+            Settings
+          </a>
         </div>
       </div>
     </footer>

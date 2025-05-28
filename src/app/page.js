@@ -58,6 +58,8 @@ export default function Home() {
           {/* <Squares2X2Icon className="h-10 w-10 p-2 rounded-full hover:bg-gray-500" /> */}
           <Avatar url="https://api.dicebear.com/8.x/pixel-art/svg?seed=inferno-flame&colors[]=orange&colors[]=red&colors[]=yellow" />
 
+
+
         </div>
       </header>
 
