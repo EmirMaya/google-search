@@ -40,23 +40,24 @@ export default function Home() {
       {/* Header */}
       <header className="w-full flex  justify-between p-4  text-sm text-gray-200 ">
         <div className="flex space-x-4 items-center">
-          <Link className="link" to="/" href={"/"}>
+          <Link className="link" href={"https://about.google/"} target="_blank" rel="noopener noreferrer">
             About
           </Link>
-          <Link className="link" to="/" href={"/"}>
+          <Link className="link" href={"https://store.google.com/"} target="_blank" rel="noopener noreferrer">
             Store
           </Link>
         </div>
 
         <div className="flex space-x-4 items-center">
-          <Link className="link" to="/" href={"/"}>
+          <Link className="link" href={"https://mail.google.com/"} target="_blank" rel="noopener noreferrer">
             Gmail
           </Link>
-          <Link className="link" to="/" href={"/"}>
+          <Link className="link" href={"https://www.google.com/imghp"} target="_blank" rel="noopener noreferrer">
             Images
           </Link>
-          <Squares2X2Icon className="h-10 w-10 p-2 rounded-full hover:bg-gray-500" />
-          <Avatar url="https://i.pravatar.cc/150?img=12" />
+          {/* <Squares2X2Icon className="h-10 w-10 p-2 rounded-full hover:bg-gray-500" /> */}
+          <Avatar url="https://api.dicebear.com/8.x/pixel-art/svg?seed=inferno-flame&colors[]=orange&colors[]=red&colors[]=yellow" />
+
         </div>
       </header>
 
