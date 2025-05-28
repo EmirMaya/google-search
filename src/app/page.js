@@ -30,36 +30,53 @@ export default function Home() {
     e.preventDefault();
     const term = searchInputRef.current.value;
 
-    if(!term) return;
+    if (!term) return;
 
     window.location.href = `https://www.google.com/search?q=${term}&btnI=I`;
-  }
+  };
 
   return (
     <div className="flex flex-col justify-center items-center">
       {/* Header */}
       <header className="w-full flex  justify-between p-4  text-sm text-gray-200 ">
         <div className="flex space-x-4 items-center">
-          <Link className="link" href={"https://about.google/"} target="_blank" rel="noopener noreferrer">
+          <Link
+            className="link"
+            href={"https://about.google/"}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             About
           </Link>
-          <Link className="link" href={"https://store.google.com/"} target="_blank" rel="noopener noreferrer">
+          <Link
+            className="link"
+            href={"https://store.google.com/"}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Store
           </Link>
         </div>
 
         <div className="flex space-x-4 items-center">
-          <Link className="link" href={"https://mail.google.com/"} target="_blank" rel="noopener noreferrer">
+          <Link
+            className="link"
+            href={"https://mail.google.com/"}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Gmail
           </Link>
-          <Link className="link" href={"https://www.google.com/imghp"} target="_blank" rel="noopener noreferrer">
+          <Link
+            className="link"
+            href={"https://www.google.com/imghp"}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Images
           </Link>
           {/* <Squares2X2Icon className="h-10 w-10 p-2 rounded-full hover:bg-gray-500" /> */}
-          <Avatar url="https://api.dicebear.com/8.x/pixel-art/svg?seed=inferno-flame&colors[]=orange&colors[]=red&colors[]=yellow" />
-
-
-
+          <Avatar url="/profile.png" />
         </div>
       </header>
 
@@ -97,14 +114,19 @@ export default function Home() {
         </div>
 
         {/* <Image src='https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/1200px-Google_2015_logo.svg.png' height={40} width={300} alt="logo"/> */}
-        <div className="flex w-full text-sm sm:text-base mt-3 hover:shadow-lg focus-within:shadow-lg max-w-md rounded-full border-2 border-gray-200 px-3 py-2 sm:px-5 sm:py-3 items-center sm:max-w-xl lg:max-w-2xl">
-          <MagnifyingGlassIcon className="h-5 mr-3 text-gray-300" />
+        <div className="flex w-full text-sm sm:text-base mt-3   max-w-md rounded-full border-2 border-gray-200 px-3 py-2 sm:px-5 sm:py-3 items-center sm:max-w-xl lg:max-w-2xl focus-within:shadow-white focus-within:shadow-sm">
+          <button
+            onClick={search}
+            className="focus:outline-none"
+          >
+            <MagnifyingGlassIcon className="h-5 mr-3 text-gray-300 hover:text-white transition" />
+          </button>
           <input
             ref={searchInputRef}
             type="text"
             className="focus:outline-none flex-grow text-white"
           />
-          <MicrophoneIcon className="h-5 text-gray-300" />
+          {/* <MicrophoneIcon className="h-5 text-gray-300" /> */}
         </div>
 
         <div className="flex flex-col w-1/3 sm:w-1/2 space-y-2 justify-center mt-8 sm:space-y-0 sm:flex-row sm:space-x-4 mb-48">
