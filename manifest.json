@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Buscador Retro - Nueva Pestaña",
+  "name": "Retro Google - Nueva Pestaña",
   "version": "1.0",
   "description": "Una experiencia vintage para tus búsquedas. Estilo retro para tu página de nueva pestaña.",
   "chrome_url_overrides": {
@@ -13,6 +13,6 @@
   },
   "permissions": [],
   "action": {
-    "default_title": "Buscador Retro"
+    "default_title": "Retro Google"
   }
 }
